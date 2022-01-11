@@ -1,0 +1,7 @@
+.block_ship {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 50px;
+    border: 2px solid black;
+}
