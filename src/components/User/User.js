@@ -6,7 +6,7 @@ const {id, name, email} = user
 
     return (
 
-        <div className={'userWrap'}>
+        <div>
             <div>{id} - {name} - {email}
             <button onClick={() => {getUserDetails(user)}}>User Details</button>
             </div>

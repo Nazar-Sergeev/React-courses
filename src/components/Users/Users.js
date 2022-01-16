@@ -17,7 +17,7 @@ const Users = ({getUserDetails}) => {
 
     return (
         <div>
-            <div>{users.map(value => <User key={value.id} user={value} getUserDetails={getUserDetails}/>)}</div>
+            <div>{users.map(user => <User key={user.id} user={user} getUserDetails={getUserDetails}/>)}</div>
         </div>
     );
 };
