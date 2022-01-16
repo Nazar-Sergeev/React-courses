@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 
+import Comment from "../Comment/Comment";
+
 
 export default function Comments() {
 
@@ -14,15 +16,7 @@ export default function Comments() {
     }, []);
     return (
         <div className='comments_block'>
-            {
-                comments.map(comment =>
-                    <div key={comment.id}>
-                        <h5>{comment.id} - {comment.name}</h5>
-                        <p>{comment.body}</p>
-                    </div>
-
-                )
-            }
+            {comments.map(comment => <Comment key={comment.id} comment={comment}/>)}
         </div>
     );
 }

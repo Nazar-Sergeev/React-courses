@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
+
 import './Users.css'
+import User from "../User/User";
 
 export default function Users() {
 
@@ -14,11 +16,7 @@ export default function Users() {
 
     return (
         <div className='users_block'>
-            {
-                users.map( user =>
-                    <h5 key={user.id}>{user.id} - {user.name} {user.username}</h5>
-                )
-            }
+            {users.map(user => <User key={user.id} user={user}/>)}
         </div>
     );
 }

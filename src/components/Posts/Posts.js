@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
+
 import './Posts.css'
+import Post from "../Post/Post";
 
 export default function Posts() {
 
@@ -16,14 +18,7 @@ export default function Posts() {
 
     return (
         <div className='posts_block'>
-            {
-                posts.map(post=>
-                    <div key={post.id}>
-                        <h5>{post.id} - {post.title}</h5>
-                        <p>{post.body}</p>
-                    </div>
-                )
-            }
+            {posts.map(post => <Post key={post.id} post={post}/>)}
         </div>    
     );
 }    
