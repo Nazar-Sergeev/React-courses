@@ -1,6 +1,5 @@
 import {useState} from "react";
 
-
 import './App.css';
 import Users from "./components/Users/Users";
 import UserDetails from "./components/User/UserDetails";
@@ -20,17 +19,12 @@ function App() {
     };
 
 
-    const getUserId = (id) => {
-        setUserId(id)
-    };
-
-
     return (
     <div>
 
         <div className={'usersWrap'}>
             <Users getUserDetails={getUserDetails}/>
-            {user && <UserDetails user={user} getUserId={getUserId}/>}
+            {user && <UserDetails user={user} getUserId={setUserId}/>}
         </div>
         {userId && <Posts userId={userId}/>}
 

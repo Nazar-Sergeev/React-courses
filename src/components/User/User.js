@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const User = ({user, getUserDetails}) => {
 const {id, name, email} = user
 

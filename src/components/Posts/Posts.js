@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-
 import {postService} from "../../services/post.service";
 import Post from "../Post/Post";
 
