@@ -1,0 +1,18 @@
+.wrapUsersBlock{
+    display: flex;
+    justify-content: space-between;
+}
+.wrapDetails{
+    width: 60%;
+}
+
+.wrapDetails button{
+    width: 90%;
+}
+
+.wrapUserPost{
+    width: 90%;
+    text-align: justify;
+    height: 100vh;
+    overflow-y: auto;
+}

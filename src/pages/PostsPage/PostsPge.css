@@ -1,0 +1,15 @@
+.wrapPosts{
+    width: 50%;
+    text-align: justify;
+}
+.wrapPostsDetails{
+    width: 40%;
+}
+.wrapPostsDetails button{
+    width: 90%;
+}
+
+.wrapPostsBlock{
+    display: flex;
+    justify-content: space-between;
+}
