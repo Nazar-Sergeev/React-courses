@@ -12,7 +12,6 @@ const SecondUsersPage = () => {
 
     const [posts, setPosts] = useState([]);
 
-
     useEffect(() => {
         userService.getUserPostById(id).then(value => setPosts([...value]));
     }, [id]);

@@ -9,9 +9,9 @@ const FirstUsersPage = () => {
 
     const {id} = useParams();
 
-    const [user, setUser] = useState(null);
-
     const {state} = useLocation();  /// pull object state
+
+    const [user, setUser] = useState(null);
 
 // const navigate = useNavigate() /// travel on routes
 

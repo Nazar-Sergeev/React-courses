@@ -8,12 +8,8 @@ import FirstUsersPage from "./pages/UsersPage/FirstUsersPage/FirstUsersPage";
 import PostsPage from "./pages/PostsPage/PostsPage";
 import FirstPostsPage from "./pages/PostsPage/FirstPostPage/FirstPostsPage";
 import SecondPostPage from "./pages/PostsPage/SecondPostPage/SecondPostPage";
+import SecondUsersPage from "./pages/UsersPage/SecondUsersPage/SecondUsersPage";
 
-
-
-function SecondUsersPage() {
-    return null;
-}
 
 const App = () => {
     return (
@@ -25,16 +21,16 @@ const App = () => {
                         <Route path={':id'} element={<FirstUsersPage/>}>
                             <Route path={'posts'} element={<SecondUsersPage/>}/>
                         </Route>
-                        </Route>
-                        <Route path={'posts'} element={<PostsPage/>}>
-                            <Route path={':id'} element={<FirstPostsPage/>}>
-                                <Route path={'comments'} element={<SecondPostPage/>}/>
-                            </Route>
+                    </Route>
+                    <Route path={'posts'} element={<PostsPage/>}>
+                        <Route path={':id'} element={<FirstPostsPage/>}>
+                            <Route path={'comments'} element={<SecondPostPage/>}/>
                         </Route>
                     </Route>
+                </Route>
             </Routes>
         </div>
-);
+    );
 };
 
 
