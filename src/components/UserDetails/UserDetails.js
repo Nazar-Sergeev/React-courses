@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 const UserDetails = ({user}) => {
     return (
         <div>
+            <h1>User Details</h1>
             <h2>{user.id} - {user.name} - {user.username}</h2>
             <h4>Email: {user.email}</h4>
             <h4>Phone: {user.phone}</h4>

@@ -1,11 +1,10 @@
 import React from 'react';
 
-const AlbumUser = () => {
-
-
+const AlbumUser = ({album:{userId, id, title}}) => {
     return (
         <div>
-            Album
+            <h4>UserId: {userId} - id: {id}</h4>
+            <h5>Title: {title}</h5>
         </div>
     );
 };
