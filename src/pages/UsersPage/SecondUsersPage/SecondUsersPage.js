@@ -5,7 +5,6 @@ import {userService} from "../../../services/user.service";
 import UserPost from "../../../components/UserPost/UserPost";
 import '../UsersPage.css'
 
-
 const SecondUsersPage = () => {
 
     const {id} = useParams();

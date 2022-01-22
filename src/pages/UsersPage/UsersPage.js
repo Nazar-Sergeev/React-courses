@@ -23,7 +23,9 @@ const UsersPage = () => {
                     {users.map(user => <User key={user.id} user={user}/>)}
                 </div>
 
-                <div className={'wrapDetails'}><Outlet/></div>
+                <div className={'wrapDetails'}>
+                    <Outlet/>
+                </div>
 
             </div>
         </div>

@@ -5,6 +5,7 @@ const PostDetails = ({post}) => {
     return (
         <div>
             <div>
+                <h1>Post Details</h1>
                 <h5>UserId: {post.userId}</h5>
                 <h5>Id: {post.id}</h5>
                 <h5>Title: {post.title}</h5>
