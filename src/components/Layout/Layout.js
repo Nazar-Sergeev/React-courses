@@ -1,9 +1,10 @@
 import React from 'react';
-import {Link, Outlet} from "react-router-dom";
+import {Link, Outlet} from 'react-router-dom';
 
 import './Layout.css'
 
 const Layout = () => {
+
     return (
         <div className={'d-flex'}>
 
@@ -24,7 +25,7 @@ const Layout = () => {
                     <button>NOTEBOOK</button>
                 </Link>
             </div>
-            <div>
+            <div className={'outlet'}>
                 <Outlet/>
             </div>
 

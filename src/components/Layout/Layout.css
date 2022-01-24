@@ -10,5 +10,15 @@
     margin-bottom: 20px;
 }
 .d-flex{
-    df
+    display: flex;
+}
+
+.outlet{
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+}
+
+.outlet button{
+    width: 100%;
 }

@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Dog = () => {
+const Dog = ({dog, update}) => {
     return (
         <div>
-            
+            <div>
+                <img src={dog} alt={dog}/>
+            </div>
+            <button onClick={update}>Update</button>
         </div>
     );
 };

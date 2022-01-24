@@ -1,27 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import {getService} from "../../services/get.service";
+import React from 'react';
 
-const Cat = () => {
-
-    const [cat, setCat] = useState({});
-
-    useEffect(() => {
-        update()
-    },[])
-
-
-    const update = async () => {
-
-        getService.getAll('cat').then(value => {
-            let imageUrl = URL.createObjectURL(value)
-            setCat(imageUrl)
-        })
-    }
+const Cat = ({cat, update}) => {
 
     return (
         <div>
             <div>
-                {<img src={cat} alt={cat}/>}
+                <div><img src={cat} alt={cat}/></div>
                 <button onClick={update}>Update</button>
             </div>
         </div>

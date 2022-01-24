@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Notebook = () => {
+const Notebook = ({notebook, update}) => {
+
     return (
         <div>
+            <div>
+                <img src={notebook} alt={notebook}/>
+            </div>
+            <button onClick={update}>Update</button>
 
         </div>
     );
