@@ -1,8 +1,9 @@
-import './App.css';
-import {useReducer} from "react";
+import {useReducer} from 'react';
 
+import './App.css';
 
 const reducer = (state, action) => {
+
     switch (action.type) {
         case 'inc1':
             return{...state, count1: state.count1 + 1}
@@ -31,7 +32,6 @@ function App() {
 
     const [state, dispatch] = useReducer(reducer, {count1: 0, count2: 0, count3: 0});
 
-
   return (
     <div>
         <div>
@@ -52,7 +52,6 @@ function App() {
             <button onClick={() => dispatch({type:'dec3'})}>DEC</button>
             <button onClick={() => dispatch({type:'reset3'})}>RESET</button>
         </div>
-
     </div>
   );
 }
