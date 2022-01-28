@@ -1,38 +1,61 @@
+import './App.css';
 import {useReducer} from "react";
 
-import './App.css';
 
-    const reducer = (state, action) => {
-
-        state = {...state, count2: state.count2 + 1}
-
-        switch (action.type) {
-            case 'inc':
-                return {...state, count1: state.count1 + 1}
-            case 'dec':
-                return {...state, count1: state.count1 - 1}
-            case 'reset':
-                return {...state, count1: action.payload}
-        }
-        // return state
-
-    };
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'inc1':
+            return{...state, count1: state.count1 + 1}
+        case 'dec1':
+            return {...state, count1: state.count1 - 1}
+        case'reset1':
+            return {...state, count1:0}
+        case 'inc2':
+            return {...state, count2: state.count2 + 1};
+        case 'dec2':
+            return {...state, count2: state.count2 - 1}
+        case'reset2':
+            return {...state, count2:0}
+        case 'inc3':
+            return {...state, count3: state.count3 + 1};
+        case 'dec3':
+            return {...state, count3: state.count3 - 1}
+        case'reset3':
+            return {...state, count3:0}
+        default :
+            return state
+    }
+}
 
 function App() {
 
-useReducer(reducer, {})
+    const [state, dispatch] = useReducer(reducer, {count1: 0, count2: 0, count3: 0});
+
 
   return (
     <div>
-
-        <h1>{state.count1}</h1>
-        <h1>{state.count2}</h1>
-      <button onClick={() => dispatch({type: 'inc'})}>INC</button>
-      <button onClick={() => dispatch({type:'dec'})}>DEC</button>
-      <button onClick={() => dispatch({type:'reset', payload:8})}>RESET</button>
+        <div>
+            <h1>{state.count1}</h1>
+            <button onClick={() => dispatch({type: 'inc1'})}>INC</button>
+            <button onClick={() => dispatch({type:'dec1'})}>DEC</button>
+            <button onClick={() => dispatch({type:'reset1', })}>RESET</button>
+        </div>
+        <div>
+            <h1>{state.count2}</h1>
+            <button onClick={() => dispatch({type: 'inc2'})}>INC</button>
+            <button onClick={() => dispatch({type:'dec2'})}>DEC</button>
+            <button onClick={() => dispatch({type:'reset2'})}>RESET</button>
+        </div>
+        <div>
+            <h1>{state.count3}</h1>
+            <button onClick={() => dispatch({type: 'inc3'})}>INC</button>
+            <button onClick={() => dispatch({type:'dec3'})}>DEC</button>
+            <button onClick={() => dispatch({type:'reset3'})}>RESET</button>
+        </div>
 
     </div>
   );
 }
 
 export default App;
+
