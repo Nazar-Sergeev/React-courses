@@ -1,9 +1,7 @@
 import {Cats, Dogs, Form} from "./components";
-import {useReducer, useState} from "react";
+import {useState} from "react";
 
 export default function App() {
-
-    // const [state, dispatch] = useReducer(reducer, {});
 
     const [cats, setCats] = useState([]);
     const [dogs, setDogs] = useState([]);
