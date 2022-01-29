@@ -1,29 +1,27 @@
-import React, {useState} from 'react';
+import {useForm} from "react-hook-form";
 
-import './Form.css'
+const Form = ({getFormData}) => {
 
-const Form = () => {
+    const {handleSubmit, register, reset} = useForm({});
 
-    const [form, setForm] = useState({});
-
-    const submit = (e) => {
-        e.preventDefault()
-        console.log(e.target.cat.value)
-
-    }
-
+    const submit = (data) => {
+        getFormData(data)
+        reset()
+    };
     return (
         <div>
+            <div style={{display:'flex', justifyContent: 'space-around'}}>
 
-            <div className={'d-flex'}>
-                <form onSubmit={submit}>
-                    <label>Add Cat: <input type="text" name={'cat'}/></label>
+                <form onSubmit={handleSubmit(submit)}>
+                    <label>Add Cat: <input type="text" {...register('cat')}/></label>
                     <button>SAVE</button>
                 </form>
-                <form>
-                    <label>Add Dog: <input type="text" name={'dog'}/></label>
+
+                <form onSubmit={handleSubmit(submit)}>
+                    <label>Add Dog: <input type="text" {...register('dog')}/></label>
                     <button>SAVE</button>
                 </form>
+
             </div>
 
         </div>
@@ -31,4 +29,4 @@ const Form = () => {
 };
 
 
-export default Form;
+export {Form};

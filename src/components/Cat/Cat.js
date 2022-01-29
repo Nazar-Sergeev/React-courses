@@ -1,12 +1,13 @@
-import React from 'react';
-
-const Cat = () => {
+const Cat = ({item, getId}) => {
+    const {id, cat} = item;
+    console.log(cat)
     return (
         <div>
-            Cat
+          <h1>Name: {cat}</h1>
+            <button onClick={() => getId(id)}>delete</button>
         </div>
     );
 };
 
 
-export default Cat;
+export {Cat};
