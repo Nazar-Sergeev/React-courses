@@ -1,4 +1,4 @@
-const Dog = () => {
+const Cars = () => {
     return (
         <div>
 
@@ -7,4 +7,4 @@ const Dog = () => {
 };
 
 
-export {Dog};
+export {Cars};
