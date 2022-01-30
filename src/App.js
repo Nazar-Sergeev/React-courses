@@ -7,11 +7,11 @@ export default function App() {
     const [dogs, setDogs] = useState([]);
 
     const getFormCatData = (data) => {
-        setCats([...cats, {id:new Date(), ...data}])
+        setCats([...cats, {id:new Date().getTime(), ...data}])
 
     };
     const getFormDogData = (data) => {
-        setDogs([...dogs, {id: new Date(), ...data}]);
+        setDogs([...dogs, {id: new Date().getTime(), ...data}]);
     }
 
     const getCatId = (id) => {
