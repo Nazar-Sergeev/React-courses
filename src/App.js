@@ -1,4 +1,4 @@
-import {Cats, Dogs, Form} from "./components";
+import {Cats, Dogs, FormCat, FormDog} from "./components";
 import {useState} from "react";
 
 export default function App() {
@@ -23,7 +23,10 @@ export default function App() {
     }
     return (
         <div>
-            <Form getFormCatData={getFormCatData} getFormDogData={getFormDogData}/>
+            <div style={{display:'flex', justifyContent: 'space-around'}}>
+                <FormCat getFormCatData={getFormCatData}/>
+                <FormDog getFormDogData={getFormDogData}/>
+            </div>
             <hr/>
             <div style={{display:'flex', justifyContent:'space-around'}}>
                 <Cats cats={cats} getCatId={getCatId}/>
