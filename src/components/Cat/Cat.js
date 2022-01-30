@@ -1,17 +1,13 @@
-import {useDispatch} from "react-redux";
 
-import {deleteCat} from "../../store";
 
-const Cat = ({cat}) => {
+const Cat = ({cat, deleteCat}) => {
 
-    const {id, catName} = cat
-
-    const dispatch = useDispatch();
+    const {id} = cat
 
     return (
         <div>
-            <h1>{catName}</h1>
-            <button onClick={() => dispatch(deleteCat({id}))}>delete</button>
+            <h1>{cat}</h1>
+            <button onClick={() => deleteCat(id)}>delete</button>
         </div>
     );
 };
