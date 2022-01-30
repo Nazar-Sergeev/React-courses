@@ -1,21 +1,27 @@
 import {useForm} from "react-hook-form";
+import {useDispatch} from "react-redux";
 
-const FormCat = ({getFormCatData}) => {
+import {addCat} from "../../store";
+
+const FormCat = () => {
+
+    const dispatch = useDispatch();
+
     const {handleSubmit, register, reset} = useForm();
 
-    const submitCat = (data) => {
-        getFormCatData(data)
+    const submit = (data) => {
+        dispatch(addCat({data}))
         reset()
     };
+
     return (
         <div>
-            <form onSubmit={handleSubmit(submitCat)}>
-                <label>Add cat: <input type="text" {...register('cat')}/></label>
+            <form onSubmit={handleSubmit(submit)}>
+                <label>Add cat: <input type="text" {...register('catName')}/></label>
                 <button>SAVE</button>
             </form>
         </div>
     );
 };
-
 
 export {FormCat};

@@ -1,12 +1,16 @@
+import {useSelector} from "react-redux";
+
 import {Cat} from "../Cat/Cat";
 
-const Cats = ({cats, getCatId}) => {
+const Cats = () => {
+
+    const {cats} = useSelector(state => state['catReducer']);
+
     return (
         <div>
-            {cats.map(cat=> <Cat key={cat.id} item={cat} getCatId={getCatId}/>)}
+            {cats.map(cat=> <Cat key={cat.id} cat={cat}/>)}
         </div>
     );
 };
-
 
 export {Cats};
