@@ -1,9 +1,11 @@
 import {Car} from "../Car/Car";
+import {useSelector} from "react-redux";
 
-const Cars = ({cars, getById}) => {
+const Cars = () => {
+    const {cars} = useSelector(state => state['carReducer']);
     return (
         <div>
-            {cars.map(car=> <Car key={car.id} car={car} getById={getById}/>)}
+            {cars.map(car=> <Car key={car.id} car={car} />)}
         </div>
     );
 };
