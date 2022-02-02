@@ -1,7 +1,8 @@
-const Comment = () => {
+const Comment = ({comment:{id, name, body}}) => {
     return (
         <div>
-            Comment
+            <h3>{id} - {name}</h3>
+            <p><b>Body:</b> {body}</p>
         </div>
     );
 };
