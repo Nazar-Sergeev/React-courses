@@ -1,12 +1,12 @@
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
+
 import {User} from "../User/User";
 import {getAllUsers} from "../../store";
 
 const Users = () => {
 
     const {users, status, error} = useSelector(state => state['userReducer']);
-
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -21,6 +21,5 @@ const Users = () => {
         </div>
     );
 };
-
 
 export {Users};

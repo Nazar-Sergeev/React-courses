@@ -1,7 +1,9 @@
 import {useDispatch} from "react-redux";
+
 import {deleteCar} from "../../store";
 
 const Car = ({car}) => {
+
     const dispatch = useDispatch();
     
     const {id, model, price, year} = car;
@@ -17,6 +19,5 @@ const Car = ({car}) => {
         </div>
     );
 };
-
 
 export {Car};

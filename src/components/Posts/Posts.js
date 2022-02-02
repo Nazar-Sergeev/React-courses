@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
-import {Post} from "../Post/Post";
 import {useEffect} from "react";
+
+import {Post} from "../Post/Post";
 import {getAllPosts} from "../../store";
 
 const Posts = () => {
@@ -19,6 +20,5 @@ const Posts = () => {
         </div>
     );
 };
-
 
 export {Posts};

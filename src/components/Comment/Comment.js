@@ -7,5 +7,4 @@ const Comment = ({comment:{id, name, body}}) => {
     );
 };
 
-
 export {Comment};

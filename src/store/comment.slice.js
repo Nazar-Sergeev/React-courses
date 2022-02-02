@@ -3,7 +3,9 @@ import {commentService} from "../services/commnet.service";
 
 
 export const getAllComments = createAsyncThunk(
+
     'commentSlice/getAllComments',
+
     async () => {
         const comments = await commentService.getAll();
         return comments;
@@ -12,6 +14,7 @@ export const getAllComments = createAsyncThunk(
 
 const commentSlice = createSlice({
     name: 'commentSlice',
+
     initialState: {
         comments: [],
         status: null

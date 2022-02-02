@@ -8,5 +8,4 @@ const UsersPage = () => {
     );
 };
 
-
 export {UsersPage};

@@ -1,6 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-
 const carSlice = createSlice({
 
     name: 'carSlice',
@@ -16,6 +15,7 @@ const carSlice = createSlice({
                 ...action.payload.data
             })
         },
+
         deleteCar: (state, action) => {
             state.cars = state.cars.filter(car => car.id !== action.payload.id)
         }

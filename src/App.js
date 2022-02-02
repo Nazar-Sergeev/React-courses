@@ -1,7 +1,8 @@
-import './App.css';
 import {Route, Routes} from "react-router-dom";
-import {CarsPage, CommentsPage, HomePage, PostsPage, UsersPage} from "./pages";
+
+import './App.css';
 import {Layout} from "./components";
+import {CarsPage, CommentsPage, HomePage, PostsPage, UsersPage} from "./pages";
 
 function App() {
 

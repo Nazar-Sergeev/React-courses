@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
-import {Comment} from "../Comment/Comment";
 import {useEffect} from "react";
+
+import {Comment} from "../Comment/Comment";
 import {getAllComments} from "../../store";
 
 const Comments = () => {
@@ -19,6 +20,5 @@ const Comments = () => {
         </div>
     );
 };
-
 
 export {Comments};

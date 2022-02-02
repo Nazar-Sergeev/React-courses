@@ -1,6 +1,6 @@
-import {Car} from "../Car/Car";
-
 import {useSelector} from "react-redux";
+
+import {Car} from "../Car/Car";
 
 const Cars = () => {
 
@@ -12,6 +12,5 @@ const Cars = () => {
         </div>
     );
 };
-
 
 export {Cars};

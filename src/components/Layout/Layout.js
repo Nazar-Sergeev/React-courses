@@ -10,7 +10,10 @@ const Layout = () => {
                 <Link to={'/posts'}><button>Posts page</button></Link>
                 <Link to={'/comments'}><button>Comments page</button></Link>
             </div>
-            <Outlet/>
+
+            <div>
+                <Outlet/>
+            </div>
 
         </div>
     );

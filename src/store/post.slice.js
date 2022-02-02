@@ -1,9 +1,11 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+
 import {postService} from "../services/post.service";
 
 
 export const getAllPosts = createAsyncThunk(
     'postSlice/getAllPosts',
+
     async () => {
             const posts = await postService.getAll();
             return posts;
@@ -11,6 +13,7 @@ export const getAllPosts = createAsyncThunk(
 )
 
 const postSlice = createSlice({
+
     name: 'postSlice',
 
     initialState: {
@@ -19,7 +22,9 @@ const postSlice = createSlice({
     },
 
     reducers: {},
+
     extraReducers: {
+
         [getAllPosts.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
             state.posts = action.payload

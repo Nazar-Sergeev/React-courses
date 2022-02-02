@@ -9,5 +9,4 @@ const CarsPage = () => {
     );
 };
 
-
 export {CarsPage};
