@@ -12,6 +12,7 @@
     "web-vitals": "^2.1.4",
     "axios": "^0.25.0",
     "react-router-dom": "^6.2.1",
+    "react-hook-form": "^7.26.0",
     "react-redux": "^7.2.6",
     "@reduxjs/toolkit": "^1.7.2"
   },
