@@ -28,7 +28,7 @@ const userSlice = createSlice({
 
     extraReducers: {
 
-        [getAllUsers.pending]: (state, action) => {
+        [getAllUsers.pending]: (state) => {
             state.status = 'loading'
             state.error = null
         },
