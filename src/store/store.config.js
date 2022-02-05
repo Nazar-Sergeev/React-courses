@@ -7,7 +7,7 @@ import commentReducer from "./comment.slice";
 
 
 const store = configureStore({
-    reducer:{
+    reducer: {
         carReducer,
         userReducer,
         postReducer,

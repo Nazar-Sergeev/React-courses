@@ -3,12 +3,11 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {userService} from "../services/user.service";
 
 export const getAllUsers = createAsyncThunk(
-
     'userSlice/getAllUsers',
     async (_, {rejectWithValue}) => {
         try {
-            const users = await userService.getAll();
-            return users
+            return await userService.getAll()
+
         } catch (error) {
             return rejectWithValue(error.message)
         }

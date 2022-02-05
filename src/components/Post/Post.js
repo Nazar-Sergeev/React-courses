@@ -1,4 +1,4 @@
-const Post = ({post:{id, title, body}}) => {
+const Post = ({post: {id, title, body}}) => {
 
     return (
         <div>

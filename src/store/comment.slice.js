@@ -1,14 +1,12 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+
 import {commentService} from "../services/commnet.service";
 
-
 export const getAllComments = createAsyncThunk(
-
     'commentSlice/getAllComments',
 
     async () => {
-        const comments = await commentService.getAll();
-        return comments;
+        return await commentService.getAll();
     }
 )
 
@@ -20,9 +18,10 @@ const commentSlice = createSlice({
         status: null
     },
 
-    reducers:{},
+    reducers: {},
 
-    extraReducers:{
+    extraReducers: {
+
         [getAllComments.fulfilled]: (state, action) => {
             state.status = 'fulfilled'
             state.comments = action.payload

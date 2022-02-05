@@ -11,7 +11,7 @@ const Comments = () => {
 
     useEffect(() => {
         dispatch(getAllComments())
-    },[])
+    }, [])
 
     return (
         <div>

@@ -1,11 +1,11 @@
 import {useDispatch} from "react-redux";
 
-import {deleteCar} from "../../store";
+import {carToUpdate, deleteCar} from "../../store";
 
 const Car = ({car}) => {
 
     const dispatch = useDispatch();
-    
+
     const {id, model, price, year} = car;
 
     return (
@@ -15,6 +15,7 @@ const Car = ({car}) => {
                 <div>Price: {price}</div>
                 <div>Year: {year}</div>
                 <button onClick={() => dispatch(deleteCar({id}))}>delete</button>
+                <button onClick={() => dispatch(carToUpdate({car}))}>Update</button>
             </div>
         </div>
     );

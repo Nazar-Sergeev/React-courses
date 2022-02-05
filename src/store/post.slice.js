@@ -2,13 +2,11 @@ import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 
 import {postService} from "../services/post.service";
 
-
 export const getAllPosts = createAsyncThunk(
     'postSlice/getAllPosts',
 
     async () => {
-            const posts = await postService.getAll();
-            return posts;
+        return await postService.getAll();
     }
 )
 

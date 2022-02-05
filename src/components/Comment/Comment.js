@@ -1,4 +1,4 @@
-const Comment = ({comment:{id, name, body}}) => {
+const Comment = ({comment: {id, name, body}}) => {
     return (
         <div>
             <h3>{id} - {name}</h3>
